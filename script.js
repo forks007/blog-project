@@ -1,5 +1,18 @@
 const nav = document.querySelector('.nav')
+const navButton = document.getElementById('button')
+const navIcons = navButton.querySelectorAll('.icon') 
+const menuList = document.querySelector('.menuList')
 window.addEventListener('scroll',fixNav)
+
+navButton.addEventListener('click',()=>{
+    navIcons.forEach((i)=>{
+        i.classList.toggle('active') 
+    })
+    menuList.classList.toggle('active')
+})
+
+
+
 
 function fixNav() {
     if(scrollY > nav.offsetHeight +50){
