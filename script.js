@@ -25,31 +25,35 @@ function fixNav() {
 
 
 const carousel = document.querySelector(".carousel")
-const slideContainer = document.getElementById('slide-container')
-const slides = slideContainer.querySelectorAll('.slide')
+const sliderContainer = document.getElementById('slider-container')
+const slides = sliderContainer.querySelectorAll('.slide')
 
-console.log(slides.length)
+// console.log(slides.length)
 
-const left = document.getElementById('left')
-const right = document.getElementById('right')
+// const left = document.getElementById('left')
+// const right = document.getElementById('right')
 
 
 const links = ["https://source.unsplash.com/user/erondu/1600x900","https://source.unsplash.com/collection/190727/1600x900","https://source.unsplash.com/collection/190726/1600x900","https://source.unsplash.com/collection/190725/1600x900"]
 
 
 let idx = 0;
-let interval = setInterval(run, 2000);
+let interval = setInterval(run, 5000);
+
+
 function run(){
+    
     idx++
     changeSlide()
 }
 
+// const width = slides.clientWidth
 function changeSlide(){
     if(idx>slides.length-1) {idx=0}
     else if(idx<0){idx=slides.length-1}
-    slideContainer.style.transform = `translateX(${idx*-150}%)`
+    sliderContainer.style.transform = `translateX(calc(${idx}*-70vw))`
     
-    // setActiveSlide()
+    setActiveSlide()
     setBgToCarousel(idx)
 }
 function setActiveSlide(){
@@ -65,7 +69,7 @@ function setBgToCarousel(idx){
 
 function resetInterval(){
     clearInterval(interval)
-    interval = setInterval(run, 2000);
+    interval = setInterval(run, 5000);
 }
 
 
@@ -91,36 +95,34 @@ right.addEventListener('click',()=>{
 
 
 
-const buttons = document.querySelectorAll('button')
+// const buttons = document.querySelectorAll('button')
 
-buttons.forEach((button)=>{
-    button.addEventListener('click',(e)=>{
-        const x = e.x
-        const y = e.y
+// buttons.forEach((button)=>{
+//     button.addEventListener('click',(e)=>{
+//         const x = e.x
+//         const y = e.y
 
-        const btnTop = e.target.offsetTop;
-        const btnLeft = e.target.offsetLeft;
+//         const btnTop = e.target.offsetTop;
+//         const btnLeft = e.target.offsetLeft;
         
 
-        const circleY = y - btnTop;
-        const circleX= x- btnLeft;
-        // console.log(circleX,circleY);
+//         const circleY = y - btnTop;
+//         const circleX= x- btnLeft;
+//         // console.log(circleX,circleY);
 
-        const circle = document.createElement('span')
-        circle.classList.add('circle')
-        circle.style.top = `${circleY}px`
-        circle.style.left = `${circleX}px`
+//         const circle = document.createElement('span')
+//         circle.classList.add('circle')
+//         circle.style.top = `${circleY}px`
+//         circle.style.left = `${circleX}px`
 
-        button.appendChild(circle)
+//         button.appendChild(circle)
 
-        setTimeout(()=>{
-            circle.remove()
-        },1000)
+//         setTimeout(()=>{
+//             circle.remove()
+//         },1000)
     
-    })
-
-  
-})
+//     })  
+// })
 
 const counters = document.querySelectorAll('.counter')
 

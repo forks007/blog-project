@@ -10,7 +10,9 @@
 <body>
     <nav class="nav">
         <div class="container">
-            <h1 class="logo"><a href="/index.html">My Website</a></h1>
+            <h1 class="logo">
+                <a href="/index.html">My Website</a>
+            </h1>
             <div class="menu">
                 <div id="button">
                     <i class="fas fa-bars icon active" id="burger"></i>
@@ -41,8 +43,8 @@
 
 
     <div class="carousel">
-        <div class="slide-container" id="slide-container">
-            <div class="slide">
+        <div class="slider-container" id="slider-container">
+            <div class="slide active">
                 <img src="https://source.unsplash.com/user/erondu/1600x900">
             </div>
             <div class="slide">
@@ -56,128 +58,145 @@
             </div>
             
         </div>
-        <div class="buttons-container">
+        <!-- <div class="buttons-container">
             <div id="left" class="btn">Prev</div>
             <div id="right" class="btn">Next</div>
-        </div>
+        </div> -->
     </div>
     <main id="main">
-        <div class="sidebar">
+        <!-- <div class="sidebar">
             <div class="sidebar card">Newest signups</div>
             <div class="sidebar card">next achievements</div>
             <div class="sidebar card">newest blog</div>
             <div class="sidebar card">highest rated blog</div>
              
+        </div> -->
+        <div class="content-1">
+            <div class="player">
+                <h1>Video Player</h1>
+                <iframe width="500" height="300" src="https://www.youtube.com/embed/ssrNcwxALS4?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="users">
+                <h1>Bounty Hunters</h1>
+                <div class="user">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="" class="avatar">
+                    <div class="about">
+                        <h2>florence</h2>
+                        <h6>Playing Diablo III</h6>
+                    </div>
+                    <div class="icons">
+                        <i class="fab fa-twitter"></i>
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    
+                </div>
+                <div class="user">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="" class="avatar">
+                    <div class="about">
+                        <h2>florence</h2>
+                        <h6>Playing Diablo III</h6>
+                    </div>
+                    <div class="icons">
+                        <i class="fab fa-twitter"></i>
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    
+                </div>
+                <div class="user">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="" class="avatar">
+                    <div class="about">
+                        <h2>florence</h2>
+                        <h6>Playing Diablo III</h6>
+                    </div>
+                    <div class="icons">
+                        <i class="fab fa-twitter"></i>
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="featured">
+                <h1>Featured Content</h1>
+                <div class="items">
+                    <i class="fab fa-youtube"></i>
+                    <h2>ths is the link</h2>
+                    <h5>by Checkers</h5>
+                </div>
+                <div class="items">
+                    <i class="fab fa-youtube"></i>
+                    <h2>ths is the link</h2>
+                    <h5>by Checkers</h5>
+                </div>
+                <div class="items">
+                    <i class="fab fa-youtube"></i>
+                    <h2>ths is the link</h2>
+                    <h5>by Checkers</h5>
+                </div>
+            </div>
         </div>
 
 
-        <div class="content">
+        <div class="content-2">
 
             <div class="card">
-                <div class="card-header animated-bg" id="header">
-                    <img src="/content place holder/pexels-kaboompics-com-5938.jpg" alt="">
-        
+                <img src="https://source.unsplash.com/collection/190725/1600x900">
+                <div class="card-info">
+                    <h1>Ethereal faming guide</h1>
+                    <h2>by <span class="name">farhan</span> </h2>
+                    <span class="date">last updated on july 28th 2021</span>
+                    <span class="resources"> resources</span>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title animated-bg animated-bg-text" id="title">Lorem ipsum dolor sit amet.
-                    </h3>
-                    <p class="card-except" id="except">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, voluptas! Lorem ipsum dolor sit amet.
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                    </p>
-                    <div class="author">
-                        <div class="profile-img animated-bg" id="profile_img">
-                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
-                        </div>
-                        <div class="author-info">
-                            <strong class="animated-bg animated-bg-text" id="name">faddo</strong>
-                            <small class="animated-bg animated-bg-text" id="date">Oct 08, 2020</small>
-                        </div>
-                    </div>
-                </div>
+                    
             </div>
             <div class="card">
-                <div class="card-header animated-bg" id="header">
-                    <img src="/content place holder/pexels-kaboompics-com-5938.jpg" alt="">
-        
+                <img src="https://source.unsplash.com/collection/190725/1600x900">
+                <div class="card-info">
+                    <h1>Ethereal faming guide</h1>
+                    <h2>by <span class="name">farhan</span> </h2>
+                    <span class="date">last updated on july 28th 2021</span>
+                    <span class="resources"> resources</span>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title animated-bg animated-bg-text" id="title">Lorem ipsum dolor sit amet.
-                    </h3>
-                    <p class="card-except" id="except">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, voluptas! Lorem ipsum dolor sit amet.
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                    </p>
-                    <div class="author">
-                        <div class="profile-img animated-bg" id="profile_img">
-                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
-                        </div>
-                        <div class="author-info">
-                            <strong class="animated-bg animated-bg-text" id="name">faddo</strong>
-                            <small class="animated-bg animated-bg-text" id="date">Oct 08, 2020</small>
-                        </div>
-                    </div>
-                </div>
+                    
             </div>
             <div class="card">
-                <div class="card-header animated-bg" id="header">
-                    <img src="/content place holder/pexels-kaboompics-com-5938.jpg" alt="">
-        
+                <img src="https://source.unsplash.com/collection/190725/1600x900">
+                <div class="card-info">
+                    <h1>Ethereal faming guide</h1>
+                    <h2>by <span class="name">farhan</span> </h2>
+                    <span class="date">last updated on july 28th 2021</span>
+                    <span class="resources"> resources</span>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title animated-bg animated-bg-text" id="title">Lorem ipsum dolor sit amet.
-                    </h3>
-                    <p class="card-except" id="except">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, voluptas! Lorem ipsum dolor sit amet.
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                        <span class="animated-bg animated-bg-text">&nbsp;</span>
-                    </p>
-                    <div class="author">
-                        <div class="profile-img animated-bg" id="profile_img">
-                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
-                        </div>
-                        <div class="author-info">
-                            <strong class="animated-bg animated-bg-text" id="name">faddo</strong>
-                            <small class="animated-bg animated-bg-text" id="date">Oct 08, 2020</small>
-                        </div>
-                    </div>
-                </div>
+                    
             </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/collection/190725/1600x900">
+                <div class="card-info">
+                    <h1>Ethereal faming guide</h1>
+                    <h2>by <span class="name">farhan</span> </h2>
+                    <span class="date">last updated on july 28th 2021</span>
+                    <span class="resources"> resources</span>
+                </div>
+                    
+            </div>
+            
         </div>
     </main>
     <footer>
-        <!-- <div class="logo-container">
-            <i class="fab fa-twitter fa-3x"></i>
-            <i class="fab fa-youtube fa-3x"></i>
-            <i class="fab fa-facebook fa-3x"></i>
-            
-        </div> -->
+        <div class="">
+            <a href="www.facebook.com" class="m-2 p-2">
+                <i class="fab fa-facebook fa-3x"></i>
+            </a>
+            <a href="www.instagram.com" class="m-2 p-2">
+                <i class="fab fa-instagram fa-3x"></i>
+            </a>  
+            <a href="www.twitter.com" class="m-2 p-2">
+                <i class="fab fa-twitter fa-3x"></i>
+            </a>
+        </div>
         
-        <div class="counter-container">
-            <i class="fab fa-twitter fa-3x"></i>
-            <div class="counter" data-target="12000"></div>
-            <span>Twitter Followers</span>
+        <div class="text-secondary-200 uppercase w-full text-center">
+            2021-fork mediterranian I <a href="">legal warning</a> I <a href="">cookies policy</a>
         </div>
-        <div class="counter-container">
-            <i class="fab fa-youtube fa-3x"></i>
-            <div class="counter" data-target="5000"></div>
-            <span>YouTube Subscribers</span>
-        </div>
-        <div class="counter-container">
-            <i class="fab fa-facebook fa-3x"></i>
-            <div class="counter" data-target="7500"></div>
-            <span>Facebook Fans</span>
-        </div>
-    
-
     </footer>
 
 
