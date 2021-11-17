@@ -72,74 +72,34 @@ function resetInterval(){
     interval = setInterval(run, 5000);
 }
 
+const cardsContainer = document.querySelector('.content-2 .cards')
+const cards = document.querySelectorAll('.content-2 .cards .card')
+const leftArrow = document.querySelector('.content-2 .arrows.left')
+const rightArrow = document.querySelector('.content-2 .arrows.right')
 
+let count = 0 
 
-
-
-
-
-
-
-
-left.addEventListener('click',()=>{
-    idx--
-    changeImage()
-    resetInterval()
+leftArrow.addEventListener('click',()=>{
+    console.log('hello')
+    count--
+    console.log(count)
+    console.log(cards.length)
+    changeCard()
+    // resetInterval()
 })
-right.addEventListener('click',()=>{
-    idx++
-    changeImage()
-    resetInterval()
+rightArrow.addEventListener('click',()=>{
+    count++
+    console.log(count)
+
+    changeCard()
+    // resetInterval()
 })
-
-
-
-
-// const buttons = document.querySelectorAll('button')
-
-// buttons.forEach((button)=>{
-//     button.addEventListener('click',(e)=>{
-//         const x = e.x
-//         const y = e.y
-
-//         const btnTop = e.target.offsetTop;
-//         const btnLeft = e.target.offsetLeft;
-        
-
-//         const circleY = y - btnTop;
-//         const circleX= x- btnLeft;
-//         // console.log(circleX,circleY);
-
-//         const circle = document.createElement('span')
-//         circle.classList.add('circle')
-//         circle.style.top = `${circleY}px`
-//         circle.style.left = `${circleX}px`
-
-//         button.appendChild(circle)
-
-//         setTimeout(()=>{
-//             circle.remove()
-//         },1000)
+function changeCard(){
+    if(count>cards.length-1) {count=0}
+    else if(count<0){count=cards.length-1}
+    cardsContainer.style.transform = `translateX(${count}*-400px)`
     
-//     })  
-// })
+}
 
-const counters = document.querySelectorAll('.counter')
 
-counters.forEach(counter=>{
-    counter.innerText = '0'
-    const updateCounter = ()=>{
-        const target = +counter.getAttribute('data-target')
-        const c = +counter.innerText
 
-        const increment = target/200
-
-        if(c<target){
-            counter.innerText = `${Math.ceil(c+increment)}`
-            setTimeout(updateCounter,1)
-        }else{
-            counter.innerText = target
-        }
-    }
-    updateCounter()
-})
