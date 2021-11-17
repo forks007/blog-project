@@ -1,7 +1,7 @@
 const nav = document.querySelector('.nav')
 const navButton = document.getElementById('button')
 const navIcons = navButton.querySelectorAll('.icon') 
-const menuList = document.querySelector('.menuList')
+const menuList = document.querySelector('.menu-list')
 window.addEventListener('scroll',fixNav)
 
 navButton.addEventListener('click',()=>{
