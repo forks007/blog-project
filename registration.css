@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(182, 69, 3, 0.753);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: url("https://source.unsplash.com/0srr4lMWZLQ");
+    
+
+}
+
+.container{
+    display: flex;
+    background-color: rgba(12, 10, 10, 0.541);
+    width: 90vw;
+    padding: 20px 50px;
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgb(12, 8, 3);
+}
+.social-registration {
+    flex: 1 1 0;
+    width: 100%;
+    margin: 0 50px;
+    /* background-image: url("https://source.unsplash.com/FHCVK6Vyvwc"); */
+}
+.social-registration h1{
+    /* display: inline-block; */
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-transform: uppercase;
+    /* background-color: rgba(48, 25, 11, 0.733); */
+}
+.social-registration .social{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+.social-registration .social div{
+    flex: 1 1 0;
+    background-color: #fff;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    cursor: pointer;
+}
+.social-registration .social div:active{
+    transform: scale(0.98);
+}
+.social-registration .social .fb{
+    color: rgb(43, 43, 92);
+}
+.social-registration .social .fb:hover{
+    background-color: rgb(43, 43, 92);
+    color: #fff;   
+}
+.social-registration .social .google{
+    color:   #0F9D58;
+}
+.social-registration .social .google:hover{
+    color:  #fff;   
+    background-color:   #0F9D58;
+}
+
+.social-registration .social .twitter{
+    color: #26a7de;   
+}
+.social-registration .social .twitter:hover{
+    background-color: #26a7de; 
+    color: #fff;  
+}
+.social-registration .social .tiktok{
+    color: #ff0050;
+}
+.social-registration .social .tiktok:hover{
+    background-color: #ff0050;
+    color: #fff;  
+}
+
+.container .or{
+    height: 100%;
+    width: 2px;
+    background-color: black;
+    margin: 0 100px 0 20px;
+}
+form{
+    flex: 1 1 0;
+}
+
+form .required{
+    background-color: rgba(0, 0, 0, 0.281);
+    width: 100%;
+    border-radius: 10px;
+   
+    padding: 20px;
+}
+
+
+.input{
+    position: relative;
+    margin: 20px 0 30px;
+    width: 300px;
+    padding: 15px;
+    overflow: ;
+}
+
+.input input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+    padding: 5px;
+}
+.input input:focus,
+.input input:valid{
+    outline: none;
+    border-bottom: 2px steelblue solid;
+}
+.input label{
+    position: absolute;
+    top:12px;
+    left: 20px;
+    /* display: inline-block; */
+    font-size: 18px;
+   
+   
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* .input label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+} */
+.input input:focus + label ,
+.input input:valid + label {
+    color: rgb(223, 126, 47);
+    background-color: rgb(34, 24, 12);
+    padding: 10px;
+    width: 100px;
+    text-align: end;
+    border-radius: 4px;
+    transform: translateX(-100px);
+    
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(223, 126, 47);
+    background-color: rgb(24, 21, 18);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.btn:focus{
+    outline: none;
+}
+form .optional{
+    display: none;
+}
