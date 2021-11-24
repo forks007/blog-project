@@ -9,9 +9,133 @@ body{
     align-items: center;
     color: #fff;
     background-image: url("https://source.unsplash.com/0srr4lMWZLQ");
-    
+    background-position: center center;
+    /* background-repeat: no-repeat; */
 
 }
+
+
+
+.icon-container{
+    margin: 5px auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+}
+
+.icon-container div{
+    display: inline-block;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    cursor: pointer;
+
+    /* transform: translateX(-400px); */
+}
+.icon-container div:active{
+    transform: scale(0.9);
+}
+.icon-container div:hover{
+    transform: scale(1.2);
+    color: #fff;
+}
+.icon-container .fb{
+    color: rgb(43, 43, 92);
+    animation: shiftA 3.4s linear forwards;
+    
+}
+.icon-container .fb:hover{
+    background-color: rgb(43, 43, 92);
+       
+}
+.icon-container .google{
+    color:   #0F9D58;
+    animation:shiftB 3s linear forwards;
+}
+.icon-container .google:hover{ 
+    background-color:   #0F9D58;
+}
+
+.icon-container .twitter{
+    color: #26a7de; 
+    animation:shiftC 2.6s linear forwards;  
+}
+.icon-container .twitter:hover{
+    background-color: #26a7de; 
+}
+.icon-container .tiktok{
+    color: #ff0050;
+    animation:shiftD 2.2s linear forwards;
+}
+.icon-container .tiktok:hover{
+    background-color: #ff0050; 
+}
+
+
+@keyframes shiftA {
+    0%{
+        transform: translateX(-100px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(250px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+  }
+@keyframes shiftB {
+    0%{
+        transform: translateX(-120px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(200px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+  }
+@keyframes shiftC {
+    0%{
+        transform: translateX(-140px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(130px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+  }
+@keyframes shiftD {
+    0%{
+        transform: translateX(-160px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(60px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+  }
+
+  @keyframes rotateB {
+    0%,
+    25% {
+      transform: rotate(90deg);
+    }
+  
+    50%,
+    75% {
+      transform: rotate(270deg);
+    }
+  
+    100% {
+      transform: rotate(450deg);
+    }
+  }
 
 .container{
     display: flex;
@@ -23,17 +147,20 @@ body{
     box-shadow: 20px 20px 20px rgb(12, 8, 3);
 }
 .social-registration {
+    /* position: relative; */
     flex: 1 1 0;
     width: 100%;
     margin: 0 50px;
     /* background-image: url("https://source.unsplash.com/FHCVK6Vyvwc"); */
 }
 .social-registration h1{
+    /* position: absolute; */
+    top: 10px;
     /* display: inline-block; */
     font-size: 25px;
     text-align: center;
     padding: 10px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 5px;
     text-transform: uppercase;
     /* background-color: rgba(48, 25, 11, 0.733); */
@@ -126,12 +253,13 @@ form .required{
     border: none;
     border-bottom: 2px solid #fff;
     font-size: 20px;
-    padding: 5px;
+    padding: 10px;
+    color: #fff;
 }
 .input input:focus,
 .input input:valid{
     outline: none;
-    border-bottom: 2px steelblue solid;
+    border-bottom: 2px solid rgb(223, 126, 47);
 }
 .input label{
     position: absolute;
@@ -178,5 +306,6 @@ form .required{
     outline: none;
 }
 form .optional{
-    display: none;
+    /* display: none; */
+    /* display: flex; */
 }

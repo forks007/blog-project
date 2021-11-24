@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+.container{
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+.signin-sidebar{
+    background-image: url("https://source.unsplash.com/5_9yOvWCsc4");
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.left {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.left h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.left p {
+    margin: 10px;
+}
+
+.left .signin-sidebar {
+    background-image: url("https://source.unsplash.com/5_9yOvWCsc4");
+}
+.left .reg-sidebar {
+    background-image: url("https://source.unsplash.com/eBd0dPuR-bo");
+}
+
+.right {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    padding:0 40px;
+    /* background-color: rgb(22, 20, 20); */
+    transition: transform 0.5s ease-in-out;
+    /* transform: translateY(-100%); */
+}
+.right:hover + .icon-container > div{
+    animation: shiftA 0.3s linear forwards;
+}
+
+
+.right > div {
+    height: 100%;
+    width: 100%;
+    padding: 10% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.993);
+    color: #fff;
+    transition: transform 0.5s ease-in-out;
+}
+
+.right h1{
+    text-transform: capitalize;
+    margin: 20px auto;
+}
+
+.input{
+    position: relative;
+    margin: 0px;
+    width: 80%;
+    padding: 15px;
+}
+
+.input input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}
+.input input:focus,
+.input input:valid{
+    outline: none;
+    border-bottom: 2px solid rgb(212, 169, 134);
+}
+.input label{
+    position: absolute;
+    top:25px;
+    left: 20px;
+    font-size: 18px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input input:focus + label ,
+.input input:valid + label {
+    color: rgb(212, 169, 134);
+    width: 100px;
+    border-radius: 4px;
+    transform: translateY(-30px);
+    
+}
+.remember-forget{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding:0 12%;
+    text-transform: capitalize;
+}
+.confirmation{
+    width: 100%;
+    padding: 0 12%;
+    text-transform: capitalize;
+}
+
+.separator{
+    position: relative;
+    height: 2px;
+    width: 75%;
+    /* padding-top: 25px; */
+    border-top: 2px solid gray;
+    width: 75%;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-left: 50px;
+    /* display: flex;
+    justify-content: space-around; */
+}
+.separator .or{
+    text-transform: capitalize;
+    font-size: 15px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 0;
+    background-color: black;
+}
+
+
+
+
+.icon-container div{
+    display: inline-block;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-container div:active{
+    transform: scale(0.9);
+}
+.icon-container div:hover{
+    transform: scale(1.2);
+    color: #fff;
+}
+.icon-container .or:hover{
+    transform: none;
+}
+.icon-container .fb{
+    color: rgb(43, 43, 92);
+    animation: shiftA 3.4s linear forwards;
+    
+}
+.icon-container .fb:hover{
+    background-color: rgb(43, 43, 92);
+       
+}
+.icon-container .google{
+    color:   #0F9D58;
+    animation:shiftB 3s linear forwards;
+}
+.icon-container .google:hover{ 
+    background-color:   #0F9D58;
+}
+
+.icon-container .twitter{
+    color: #26a7de; 
+    animation:shiftC 2.6s linear forwards;  
+}
+.icon-container .twitter:hover{
+    background-color: #26a7de; 
+}
+.icon-container .tiktok{
+    color: #ff0050;
+    animation:shiftD 2.2s linear forwards;
+}
+.icon-container .tiktok:hover{
+    background-color: #ff0050; 
+}
+
+
+@keyframes shiftA {
+    0%{
+        transform: translateX(-100px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(250px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+  }
+@keyframes shiftB {
+    0%{
+        transform: translateX(-120px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(200px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+  }
+@keyframes shiftC {
+    0%{
+        transform: translateX(-140px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(130px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+  }
+@keyframes shiftD {
+    0%{
+        transform: translateX(-160px) rotate(0deg);;
+    }
+    50%{
+        transform: translateX(60px) rotate(720deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+}
+
+
+.btn{
+    width: 50%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 21, 18);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.btn:focus{
+    outline: none;
+}
+
+#login,#reg{
+    background-color: transparent;
+    color: blueviolet;
+    font-size: 15px;
+    border: none;
+    padding-left: 5px;
+}
