@@ -8,108 +8,86 @@
     <title>Navbar</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <a href="/index.html"> <img src="/pngaaa.com-665776.png" alt="" width="150px"></a>
-            </div>
-            <div class="menu">
-                <ul class="menu-list">
-                    <li>
-                        <div class="home">
-                            <a href="/index.html">Home</a>
-                        </div>
-                        <ul class="sub-list">
-                            <li><a href="">Option-1</a></li>
-                            <li><a href="">Option-2</a></li>
-                            <li><a href="">Option-3</a></li>
-                            <li><a href="">Option-4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="guides">
-                            <a href="/index.html">guides</a>
-                        </div>
-                        <ul class="sub-list">
-                            <li><a href="">Option-1</a></li>
-                            <li><a href="">Option-2</a></li>
-                            <li><a href="">Option-3</a></li>
-                            <li><a href="">Option-4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="tier-list">
-                            <a href="/index.html">tier list</a>
-                        </div>
-                        <ul class="sub-list">
-                            <li><a href="">Option-1</a></li>
-                            <li><a href="">Option-2</a></li>
-                            <li><a href="">Option-3</a></li>
-                            <li><a href="">Option-4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="meta">
-                            <a href="/index.html">meta</a>
-                        </div>
-                        <ul class="sub-list">
-                            <li><a href="">Option-1</a></li>
-                            <li><a href="">Option-2</a></li>
-                            <li><a href="">Option-3</a></li>
-                            <li><a href="">Option-4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="resources">
-                            <a href="/index.html">resources</a>
-                        </div>
-                        <ul class="sub-list">
-                            <li><a href="">Option-1</a></li>
-                            <li><a href="">Option-2</a></li>
-                            <li><a href="">Option-3</a></li>
-                            <li><a href="">Option-4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="ranks">
-                            <a href="/index.html">ranks</a>
-                        </div>
-                        <ul class="sub-list">
-                            <li><a href="">Option-1</a></li>
-                            <li><a href="">Option-2</a></li>
-                            <li><a href="">Option-3</a></li>
-                            <li><a href="">Option-4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="about-us">
-                            <a href="/index.html">About Us</a>
-                        </div>
-                        <ul class="sub-list">
-                            <li><a href="">Option-1</a></li>
-                            <li><a href="">Option-2</a></li>
-                            <li><a href="">Option-3</a></li>
-                            <li><a href="">Option-4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="login-links">
-                <div class="login">
-                    <a href="/login.html">Log in</a>
-                </div>
-                <div class="sign-up">
-                    <a href="/registration.html">Sign up</a>
-                </div>
-            </div>
-            <div class="menu-btn">
-                <i class="fas fa-bars icon active" id="burger"></i>
-                <i class="fas fa-times icon" id="cross"></i>
-            </div>
-            <div class="search">
-                <i class="fas fa-search"></i>
-            </div>
+    <header>
+        <div class="logo">
+            <a href="/index.html"> <img src="/pngaaa.com-665776.png" alt="" width="150px"></a>
         </div>
-    </nav>
+
+        <nav>           
+            <i class="fas fa-times icon" id="cross"></i>
+            <div class="menu">                    
+                <a href="#" class="current">Home</a>
+                <a href="#">guides</a>
+                <a href="#">tier lists</a>
+                <a href="#">meta</a>
+                <a href="#">resources</a>
+                <a href="#">ranks</a></li>
+                <a href="#">about us</a>          
+            </div>
+        </nav>
+
+
+        <div class="signin-form">
+            <form action="">
+                <h1>Login now</h1>
+                <div class="input email">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                    <i class="fas fa-at"></i>
+                </div>
+                <div class="input pw">
+                    <input type="password" name="" id="" required>
+                    <label for="">Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="remember-forget">
+                    <p class="remember">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">remember me</label>
+                    </p>
+                    <p class="forget"><a href="/forget-pw.html">forgot password?</a></p>
+                </div>
+                <button class="btn signin">Login</button>
+
+                <h1 class="legend">or login with</h1>
+        
+                
+                <div class="icon-container">
+                    <div class="fb">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="google">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="twitter">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                </div>
+                <p class="reg">
+                    Don't have an account?
+                    <a href="/registration.html">Register here</a>
+                </p>
+            </div>
+            </form>
+        </div>
+
+        <div class="search">
+            <form action="">
+                <input type="text" name="search" placeholder="Search here..." id="search">
+                <label for="search" class="fas fa-search"></label>
+            </form>
+        </div>
+
+
+        <div class="icons">
+            <i class="fas fa-bars icon active" id="menu-btn"></i>
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="user"></i>
+        </div>
+    </header>
+    <script src="/nav.js"></script>
 </body>
 </html>

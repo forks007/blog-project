@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Oswald:wght@200;300;600&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body{
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Oswald', sans-serif;
     background-color: rgb(61, 49, 49);   
 }
 
@@ -14,102 +14,347 @@ body{
 
 /*@todo Nav*/
 
-.nav{
-    position: fixed;
+/* ...header section starts here... */
+
+header{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
     background-color: #222;
+    color: #fff;
+    
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
-    height: 80px;
+    
+    z-index: 1000;
+    max-height: 100px;
     transition: all 0.3s ease-in-out;   
 }
 
-.nav .container{
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
+.logo{
+    padding:0 20px;
+}
+
+nav{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 100%;
+    background-color: #1b1612;
     transition: all 0.3s ease-in-out;
-    /* background-color: chartreuse; */
+}
+nav.active{
+    right: 0;
+}
+nav i{
+    font-size: 25px;
+    float: right;
+    padding: 15px;
+    cursor: pointer;
+}
+nav i:hover{
+    color: #c0392b;
 }
 
-.nav .container .logo{
+nav .menu a{
+    display: block;
+    color: #8399ae;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+nav .menu a:hover{
+    color: #c0392b;
+}
+
+header .icons{
+    margin-right: 30PX;
+    /* flex: 0 0 ; */
+    display: flex;
+    justify-content: center;
+}
+
+header .icons i{
+    font-size: 25px;
+    padding-right: 20px;
+    color: #8399ae;
+
+    cursor: pointer;
+}
+
+header .icons i:hover{
+    color: #c0392b;
+
+}
+
+.search{
+    position: absolute;
+    top: -110%;
+    right: 0;
+    width: 100%;
+    padding: 15px;
+    opacity: 0;
+    background-color: #222;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.search.active{
+    top: 100%;
+    opacity: 1;
+    
+}
+.search input{
+    width: 100%;
+    background-color: white;
+    border: none;
+    border: 5px solid #58555449;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+    color: #222;
+}
+.search label{
+    position: absolute;
+    top:30px;
+    color: rgb(32, 30, 28);;
+    right: 40px;
+    font-size: 25px;
+}
+
+
+.signin-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 500px;
     padding: 20px;
-    /* background-color: chocolate; */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 249, 245, 0.877);
+    transition: all 0.3s ease-in-out;
 }
 
+.signin-form.active{
+    right: 2rem;
 
-.nav .container .menu{
+}
+
+.signin-form form{
+    width: 100%;
+}
+
+.signin-form h1{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.input{
+    position: relative;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.input input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border: 5px solid #58555449;
+    font-size: 20px;
+    padding: 10px;
+    color: #222;
+}
+.input input:focus,
+.input input:valid{
+    outline: none;
+    border: 5px solid #c0392b;
+    box-shadow:0 18px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.input label{
+    position: absolute;
+    top:20px;
+    color: rgb(32, 30, 28);;
+    left: 25px;
+    font-size: 18px;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.input i{
+    position: absolute;
+    top:25px;
+    right: 35px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input input:focus + label ,
+.input input:valid + label {
+    opacity: 0;
+    transform: translateX(400px);
+    
+}
+
+.remember-forget{
+    display: flex;
+    letter-spacing: 1px;    
+    width: 100%;
+    justify-content: space-around;
+}
+
+.icon-container{
+    display: flex;
+
+    justify-content: center;
+    margin: 0 auto;
     /* background-color: brown; */
 }
-.nav .container .menu #button i{
-    display: none;
-    color: #fff;
-    font-size: 30px;
-    padding: 20px;
-    cursor: pointer;
-}
-.nav .menu #button i.active{
-    display: block;
 
-}
-
-.nav ul{
-    display: none;
-    list-style-type: none;
-    text-transform: uppercase;
-    font-weight: bold;
-
-}
-.nav ul.active{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 100px;
-    left: 0px;
-    right: 0px;
-    padding: 20px;
-    /* bottom: 0px; */
-    background-color: rgba(0, 0, 0, 0.568);
-}
-
-.nav ul.active li{
-    /* width: 100%; */
-    cursor: pointer;
-    margin: 5px 0px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 5px;
-    text-align: center;
-    /* background-color: bisque; */
-    
-}
-.nav ul.active li a{
-    display: block;
-    color: #fff;
-    text-decoration: none;
+.icon-container div{
+    display: inline-block;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     font-size: 20px;
-    padding: 7px 15px;
-    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.icon-container div:active{
+    transform: scale(0.9);
+}
+.icon-container div:hover{
+    transform: scale(1.2);
+    color: #fff;
+}
+
+.icon-container .fb{
+    color: rgb(43, 43, 92);
     
 }
-.nav ul.active li a.current,.nav ul.active li a:hover{
-    color: #f0b851;
+.icon-container .fb:hover{
+    background-color: rgb(43, 43, 92);
        
 }
-.nav ul.active li:hover{
-    /* background-color: #222; */
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.87) , rgba(0, 0, 0, 0.349));
-    border-left: 10px solid black;
+.icon-container .google{
+    color:   #0F9D58;
 }
-.nav a.current,.nav a:hover{
-    color: #c0392b ;
-    font-weight: bold;
+.icon-container .google:hover{ 
+    background-color:   #0F9D58;
 }
 
-.nav .container .buttons{
-    display: none;
+.icon-container .twitter{
+    color: #26a7de; 
 }
+.icon-container .twitter:hover{
+    background-color: #26a7de; 
+}
+.icon-container .tiktok{
+    color: #ff0050;
+}
+.icon-container .tiktok:hover{
+    background-color: #ff0050; 
+}
+
+.reg{
+    background-color: transparent;
+    border: none;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.btn{
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 80%;
+    display: block;
+    margin:20px auto;
+    padding: 10px;
+    color: rgb(235, 223, 213);
+    border-radius: 10px;
+    background-color: rgba(5, 5, 5, 0.959);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+.btn:focus{
+    outline: none;
+}
+h1.legend {
+    font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+  
+.legend:before,
+.legend:after {
+    background-color: #c0392b;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+  
+.legend:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+  
+.legend:after {
+    left: 0.5em;
+    margin-right: -50%;
+}                                                   
+
+@media(min-width:1024px){
+    nav{
+        position: static;
+        flex: 1 1 auto;
+        background-color: transparent;
+
+    }
+    nav .menu{
+        display: flex;
+        background-color: transparent;
+        width: 100%;
+        /* background-color: #238656; */
+        justify-content: center;
+
+
+    }
+    nav .menu a{
+        display: inline-block;
+        font-size: ;
+        
+    }
+    nav #cross{
+        display: none;
+
+    }
+    #menu-btn{
+        display: none;
+    }
+}
+
+/* ...header section starts here... */
+
+
 
 
 
@@ -123,10 +368,24 @@ body{
     color: #222;
 }
 .nav.active .container{
-    padding: 10px 0;
+    /* padding: 10px 0; */
    
 }
+.login-links{
+    display: flex;
+    padding: 0.5rem;
+    font-size: 16px;
 
+}
+
+.login-links a{
+    padding: 0.5rem;
+    width: 100px;
+    color: blanchedalmond;
+    border: 2px solid rgb(96, 96, 122);
+    border-radius: 5px;
+    margin: 0 0.5rem;
+}
 
 
 .carousel{
@@ -140,7 +399,6 @@ body{
     /* background-image: url("https://source.unsplash.com/user/erondu/1600x900"); */
     background-size: cover;
     background-position: center center;
-    background
     transition: 0.5s;
     
 }
@@ -228,23 +486,35 @@ body{
 }
 
 .content-1 .player{
+    flex: 1 1 auto;
+    /* background-color: #ff0050; */
     padding: 5px;
     /* border-left: 2px solid rgba(228, 186, 139, 0.336); */
 }
 
+.content-1 .player iframe{
+    width: 100%;
+    height: 500px;
+}
+
+
 .content-1 .users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 2px;
     padding: 5px;
-    border-left: 2px solid rgba(228, 186, 139, 0.336);
+    /* border-left: 2px solid rgba(228, 186, 139, 0.336); */
 }
 
 .content-1 .users .user{
     display: flex;
     margin: 10px 5px;
     border-left: 2px solid rgba(243, 241, 241, 0.418);
-    border-bottom: 2px solid rgba(243, 241, 241, 0.418);
-    border-radius: 5px;
+    border-bottom: 5px solid rgba(243, 241, 241, 0.418);
+    /* border-radius: 5px; */
     min-width: 400px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.158);
     color: rgba(230, 166, 30, 0.568);
 }
@@ -265,27 +535,35 @@ body{
     width: 60%;
 }
 .content-1 .users .user .about h2{
-    color: #b84e1cfd;
+    color: #e2d4c4;
 }
 .content-1 .users .user .about h6{
-    color: #ca8c06;
+    color: #c0392b;
+    font-size: 15px;
 }
 .content-1 .users .user .icons{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     
 }
 .content-1 .users .user .icons i{
-    font-size: 30px;
+    font-size: 25px;
+    margin: 10px;
+    color: #e2d4c4;
     cursor: pointer;
+}
+.content-1 .users .user .icons i:hover{
+    color: #c0392b;
 }
 
 .content-1 .featured{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 2px;
     padding: 5px;
-    border-left: 2px solid rgba(228, 186, 139, 0.336);
+    /* border-left: 2px solid rgba(228, 186, 139, 0.336); */
 }
 .content-1 .featured .items{
     display: flex;
@@ -378,7 +656,7 @@ body{
 .content-2 .cards .card .card-info .name{
     text-transform: uppercase;
     color: coral;
-    letter-spacing: ;
+    /* letter-spacing: ; */
     
 } 
 .content-2 .cards .card .card-info .date{
@@ -472,8 +750,11 @@ body{
     color: #d8d8d3;
 }
 .content-3 .container .post-index ul li{
-    /* font-size: 20px; */
+    font-size: 20px;
     color: #ccc4c3b0;
+}
+.content-3 .container .post-index ul li:hover{
+    color: #c0392b;
 }
 .content-3 .container .post-index h2{
     font-size: 20px;
@@ -481,6 +762,9 @@ body{
     color: #9b8888;
     text-decoration: underline;
 
+}
+.content-3 .container .post-index h2:hover{
+    color: #c0392b;
 }
 
 
@@ -525,8 +809,16 @@ footer .text a{
     /* .nav .container{
         display: flex;
     } */
+    .nav .container .logo{  
+        /* width: 20%; */
+        /* background-color: lawngreen; */
+    }
     .nav .container .menu{
-        /* flex: 2 1 0; */
+        /* flex: 1 0 750px; */
+        margin: 0;
+        padding: 0;
+        background-color: lawngreen;
+
     }
     .nav .container .menu #button{
         display: none;
@@ -539,7 +831,8 @@ footer .text a{
         /* background-color: #2a2a72;     */
     }
     .nav .container .menu .menu-list li{
-        flex: 1 1 0;
+        flex: 1 1 auto;
+        
     }
     .nav .container .menu .menu-list li:hover{
         background-color: #241e1d;
@@ -553,10 +846,7 @@ footer .text a{
         padding: 10px;
     }
     
-    .nav .container .logo{  
-        width: 20%;
-        /* background-color: lawngreen; */
-      }
+    
     .nav .container .menu{
         width: 100%;
         justify-content: space;
